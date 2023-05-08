@@ -8,7 +8,7 @@
             _vanilla++;
             return _vanilla;
         }
-        public int IncrementChacolate() {
+        public int IncrementChocolate() {
             _chocolate++;
             return _chocolate;
         }
