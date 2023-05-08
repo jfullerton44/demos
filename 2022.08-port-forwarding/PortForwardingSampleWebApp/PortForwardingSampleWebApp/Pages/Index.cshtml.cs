@@ -1,27 +1,44 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics.Metrics;
 
-namespace PortForwardingSampleWebApp.Pages {
-    public class IndexModel : PageModel {
-        private readonly ILogger<IndexModel> _logger;
-        private SingleCounter counter = SingleCounter.GetCounter();
-        public int CurrentCount = 0;
+namespace PortForwardingSampleWebApp.Pages
+{
+    public class IceCreamModel : PageModel {
+        private IceCreamCounter _counter;
+        private int vanilla = 0;
+        private int chocolate = 0;
+        private int strawberry = 0;
 
-        public IndexModel(ILogger<IndexModel> logger) {
-            _logger = logger;
+        public IceCreamModel(IceCreamCounter iceCreamCounter) {
+            _counter = iceCreamCounter;
         }
 
         public void OnGet() {
-            CurrentCount = counter.GetCount();
+            if (_counter != null) {
+                vanilla = _counter.Vanilla;
+                chocolate = _counter.Chocolate;
+                strawberry = _counter.Strawberry;
+            }
         }
-        public void OnPost() {
-            counter.Increment();
-            CurrentCount = counter.GetCount();
-            var ua = Request.Headers["User-Agent"].ToString();
-            Console.Out.WriteLine($"Count: {CurrentCount}\tRequest UA: '{ua}'");
+        public IceCreamCounter Counter {
+            get { return _counter; }
         }
         public void OnPostVanilla() {
-            Console.Out.WriteLine("delete");
+            _counter.IncrementVanilla();
+            PrintRequestInfo(nameof(vanilla));
+        }
+        public void OnPostChocolate() {
+            _counter.IncrementChocolate();
+            PrintRequestInfo(nameof(chocolate));
+        }
+        public void OnPostStrawberry() {
+            _counter.IncrementChocolate();
+            PrintRequestInfo(nameof(strawberry));
+        }
+        private void PrintRequestInfo(string iceCreamType) {
+            var ua = Request.Headers["User-Agent"].ToString();
+            Console.WriteLine($"vote for '{iceCreamType}'. UA={ua}");
         }
     }
 }
