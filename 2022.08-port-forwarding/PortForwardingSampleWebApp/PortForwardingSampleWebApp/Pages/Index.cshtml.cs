@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics.Metrics;
 
-namespace PortForwardingSampleWebApp.Pages
+namespace Pets.Pages
 {
     public class PetsModel : PageModel {
         private PetsCounter _counter;

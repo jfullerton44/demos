@@ -1,4 +1,4 @@
-﻿namespace PortForwardingSampleWebApp {
+﻿namespace Pets {
     public class PetsCounter {
         private int _cat = 0;
         private int _dog = 0;

@@ -1,4 +1,4 @@
-using PortForwardingSampleWebApp;
+using Pets;
 
 var builder = WebApplication.CreateBuilder(args);
 
