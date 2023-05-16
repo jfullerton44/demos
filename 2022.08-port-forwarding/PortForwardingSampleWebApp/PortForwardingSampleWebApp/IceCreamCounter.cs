@@ -4,15 +4,15 @@
         private int _dog = 0;
         private int _capybara = 0;
 
-        public int Incrementcat() {
+        public int IncrementCat() {
             _cat++;
             return _cat;
         }
-        public int Incrementdog() {
+        public int IncrementDog() {
             _dog++;
             return _dog;
         }
-        public int Incrementcapybara() {
+        public int IncrementCapybara() {
             _capybara++;
             return _capybara;
         }

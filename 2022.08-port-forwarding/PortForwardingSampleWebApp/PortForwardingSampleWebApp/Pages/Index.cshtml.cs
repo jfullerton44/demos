@@ -25,15 +25,15 @@ namespace Pets.Pages
             get { return _counter; }
         }
         public void OnPostCat() {
-            _counter.Incrementcapybara();
+            _counter.IncrementCapybara();
             PrintRequestInfo(nameof(cat));
         }
         public void OnPostDog() {
-            _counter.Incrementcapybara();
+            _counter.IncrementCapybara();
             PrintRequestInfo(nameof(dog));
         }
         public void OnPostCapybara() {
-            _counter.Incrementdog();
+            _counter.IncrementCapybara();
             PrintRequestInfo(nameof(capybara));
         }
         private void PrintRequestInfo(string PetsType) {
