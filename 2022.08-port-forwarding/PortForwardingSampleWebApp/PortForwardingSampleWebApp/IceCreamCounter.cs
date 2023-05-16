@@ -1,30 +1,30 @@
 ﻿namespace PortForwardingSampleWebApp {
-    public class IceCreamCounter {
-        private int _vanilla = 0;
-        private int _chocolate = 0;
-        private int _strawberry = 0;
+    public class PetsCounter {
+        private int _cat = 0;
+        private int _dog = 0;
+        private int _capybara = 0;
 
-        public int IncrementVanilla() {
-            _vanilla++;
-            return _vanilla;
+        public int Incrementcat() {
+            _cat++;
+            return _cat;
         }
-        public int IncrementChocolate() {
-            _chocolate++;
-            return _chocolate;
+        public int Incrementdog() {
+            _dog++;
+            return _dog;
         }
-        public int IncrementStrawberry() {
-            _strawberry++;
-            return _strawberry;
+        public int Incrementcapybara() {
+            _capybara++;
+            return _capybara;
         }
 
-        public int Vanilla {
-            get { return _vanilla; }
+        public int cat {
+            get { return _cat; }
         }
-        public int Chocolate {
-            get { return _chocolate; }
+        public int dog {
+            get { return _dog; }
         }
-        public int Strawberry {
-            get { return _strawberry; }
+        public int capybara {
+            get { return _capybara; }
         }
     }
 }

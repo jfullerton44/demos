@@ -4,41 +4,41 @@ using System.Diagnostics.Metrics;
 
 namespace PortForwardingSampleWebApp.Pages
 {
-    public class IceCreamModel : PageModel {
-        private IceCreamCounter _counter;
-        private int vanilla = 0;
-        private int chocolate = 0;
-        private int strawberry = 0;
+    public class PetsModel : PageModel {
+        private PetsCounter _counter;
+        private int cat = 0;
+        private int dog = 0;
+        private int capybara = 0;
 
-        public IceCreamModel(IceCreamCounter iceCreamCounter) {
-            _counter = iceCreamCounter;
+        public PetsModel(PetsCounter PetsCounter) {
+            _counter = PetsCounter;
         }
 
         public void OnGet() {
             if (_counter != null) {
-                vanilla = _counter.Vanilla;
-                chocolate = _counter.Chocolate;
-                strawberry = _counter.Strawberry;
+                cat = _counter.cat;
+                dog = _counter.dog;
+                capybara = _counter.capybara;
             }
         }
-        public IceCreamCounter Counter {
+        public PetsCounter Counter {
             get { return _counter; }
         }
-        public void OnPostVanilla() {
-            _counter.IncrementVanilla();
-            PrintRequestInfo(nameof(vanilla));
+        public void OnPostcat() {
+            _counter.Incrementcat();
+            PrintRequestInfo(nameof(cat));
         }
-        public void OnPostChocolate() {
-            _counter.IncrementChocolate();
-            PrintRequestInfo(nameof(chocolate));
+        public void OnPostdog() {
+            _counter.Incrementdog();
+            PrintRequestInfo(nameof(dog));
         }
-        public void OnPostStrawberry() {
-            _counter.IncrementChocolate();
-            PrintRequestInfo(nameof(strawberry));
+        public void OnPostcapybara() {
+            _counter.Incrementdog();
+            PrintRequestInfo(nameof(capybara));
         }
-        private void PrintRequestInfo(string iceCreamType) {
+        private void PrintRequestInfo(string PetsType) {
             var ua = Request.Headers["User-Agent"].ToString();
-            Console.WriteLine($"vote for '{iceCreamType}'. UA={ua}");
+            Console.WriteLine($"vote for '{PetsType}'. UA={ua}");
         }
     }
 }
