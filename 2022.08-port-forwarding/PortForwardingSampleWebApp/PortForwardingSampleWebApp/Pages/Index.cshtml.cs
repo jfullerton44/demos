@@ -24,15 +24,15 @@ namespace Pets.Pages
         public PetsCounter Counter {
             get { return _counter; }
         }
-        public void OnPostcat() {
-            _counter.Incrementcat();
+        public void OnPostCat() {
+            _counter.Incrementcapybara();
             PrintRequestInfo(nameof(cat));
         }
-        public void OnPostdog() {
-            _counter.Incrementdog();
+        public void OnPostDog() {
+            _counter.Incrementcapybara();
             PrintRequestInfo(nameof(dog));
         }
-        public void OnPostcapybara() {
+        public void OnPostCapybara() {
             _counter.Incrementdog();
             PrintRequestInfo(nameof(capybara));
         }
