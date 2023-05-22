@@ -1,4 +1,4 @@
-﻿namespace PortForwardingSampleWebApp {
+﻿namespace Pets {
     public class SingleCounter {
         private object _inclock = new object();
         private int _currentCount = 0;

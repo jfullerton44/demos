@@ -1,15 +1,15 @@
 ﻿@page "/"
-@model PortForwardingSampleWebApp.Pages.IceCreamModel
+@model Pets.Pages.PetsModel
 @{
-    ViewData["Title"] = "Ice Cream";
+    ViewData["Title"] = "Pets";
 }
 
 <form method="post">
 <div>
     <ul>
-            <li><img src="~/vanilla.png" />Vanilla <span class="iceCreamCounter">@Model.Counter.Vanilla</span> <button asp-page-handler="vanilla">+1</button></li>
-            <li><img src="~/chocolate.png" />Chocolate <span class="iceCreamCounter">@Model.Counter.Chocolate</span> <button asp-page-handler="chocolate">+1</button></li>
-            <li><img src="~/strawberry.png" />Strawberry <span class="iceCreamCounter">@Model.Counter.Strawberry</span> <button asp-page-handler="strawberry">+1</button></li>
+            <li><img src="~/cat-min.png" width="150" height="150" />cat <span class="PetsCounter">@Model.Counter.cat</span> <button asp-page-handler="cat">+1</button></li>
+            <li><img src="~/dog-min.png"width="150" height="150" />dog <span class="PetsCounter">@Model.Counter.dog</span> <button asp-page-handler="dog">+1</button></li>
+            <li><img src="~/capybara-min.png" width="150" height="150"/>capybara <span class="PetsCounter">@Model.Counter.capybara</span> <button asp-page-handler="capybara">+1</button></li>
     </ul>
 </div>
 </form>

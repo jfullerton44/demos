@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "PortForwardingSampleWebApp": {
+    "Pets": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
